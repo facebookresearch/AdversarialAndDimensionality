@@ -1,0 +1,39 @@
+[bCIFAR10 EXPERIMENTS CONFIGURATION FILE]
+-----------------------------------------
+
+# This configuration file shows the arguments used in a typical bCIFAR10
+# experiment (here with input size = 3x128x128 and regularization strength
+# lam = 0.00018
+
+[Sweeping Arguments]  # i.e. arguments that may change within the experiment
+--------------------
+name = bcifar/pgd_maxpool_128_lam=0.00018
+img_size = 128
+lam = 0.00018
+dilations = 4
+
+[Experiment Specific Arguments]
+-------------------------------
+n_layers = 8
+bs = 32
+penalty = pgd
+steps = 7
+poolings = [1, 3, 5, 7]
+pooltype = maxpool
+last_layers = maxpool
+
+[Default Arguments]
+-------------------
+# datapath = None
+dataset = cifar
+epochs = 200
+no_BN = False
+no_act = False
+raw_inputs = False
+# log_step = None
+lr = 0.01
+no_training = False
+crop = False
+# q = None
+n_attacks = -1
+log_vul = False

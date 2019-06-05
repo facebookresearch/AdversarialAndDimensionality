@@ -1,0 +1,39 @@
+[GRAD-REGU VS ADV AUGMENTATION EXPERIMENT CONFIGURATION FILE]
+-------------------------------------------------------------
+
+# This configuration file shows the arguments used in a typical run for the
+# grad-regu-vs-adversarial-augmentation experiment (Sec.4.1) experiment (here
+# with PGD-regularization and regularization strength lam = 0.018
+
+[Sweeping Arguments]  # i.e. arguments that may change within the experiment
+--------------------
+name = compare_regus/pgd_lam=0.1
+lam = 0.1
+penalty = pgd
+steps = 7
+
+[Experiment Specific Arguments]
+-------------------------------
+n_layers = 6
+raw_inputs = True
+poolings = [1, 2, 3, 4, 5]
+
+[Default Arguments]
+-------------------
+# datapath = None
+dataset = cifar
+img_size = 32
+bs = 128
+epochs = 200
+no_BN = False
+no_act = False
+# log_step = None
+lr = 0.01
+no_training = False
+crop = False
+# q = None
+n_attacks = -1
+log_vul = False
+pooltype = subsamp
+dilation = 1
+last_layers = avgpool
