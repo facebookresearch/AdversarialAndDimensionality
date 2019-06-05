@@ -4,6 +4,7 @@ First-order adversarial vulnerability of neural networks and input dimension: Co
 This repository contains code to accompany the ICML 2019 paper
 [First-order adversarial vulnerability of neural networks and input dimension](http://proceedings.mlr.press/v97/simon-gabriel19a.html).
 
+
 Packages
 --------
 
@@ -65,3 +66,9 @@ The list of images used in each class can be found in the imgnet12/ folder.  To
 use our mini-imagenet dataloader, create a folder named _imgnet12/train/_
 (resp. _imgnet12/val/_), with 12 subfolders (1 per class; name irrelevant)
 containing the images listed in _train.txt_ (resp. _val.txt_).
+
+License
+-------
+
+This source code is released under a Attribution-NonCommercial 4.0 International
+license, find out more about it [here](LICENSE).
