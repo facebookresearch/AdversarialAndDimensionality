@@ -64,8 +64,6 @@ def do_epoch(epoch, net, optimizer, loader, mode, args):
     predictedAdv = None
 
     for i, (inputs, targets) in enumerate(loader):
-        if i > 100:
-            break
         optimizer.zero_grad()
         inputs, targets = inputs.to(device), targets.to(device)
         inputs.requires_grad = True
